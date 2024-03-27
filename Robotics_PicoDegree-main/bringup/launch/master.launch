@@ -6,7 +6,7 @@
   <node name="Teleop" pkg="bringup" type="enable" respawn="false" output="screen"/>
   
   <!-- MAP -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find bringup)/maps/home.yaml"/>
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find bringup)/maps/home.yaml"/> -->
 
 
   <!-- URDF -->
