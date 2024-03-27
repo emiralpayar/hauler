@@ -1,0 +1,553 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  info [
+    "RoCKIn@Home"
+  ]
+  title "Home"
+  basicTimeStep 4
+  optimalThreadCount 8
+  coordinateSystem "NUE"
+  lineScale 1
+}
+Viewpoint {
+  orientation -0.4205175939717653 -0.8345892980857852 -0.3558449896807231 1.5596963674109028
+  position -9.112054370522124 14.951584582712583 8.043610461311625
+  near 0.5
+}
+TexturedBackground {
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 5
+  location 2.5 1.8 6
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 5
+  location 7 1.8 2.7
+  castShadows TRUE
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 5
+  location 3 4 2.7
+  castShadows TRUE
+}
+DEF GROUND Solid {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "textures/parquetry.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 9.6 9.6
+        }
+      }
+      geometry IndexedFaceSet {
+        coord DEF GROUND_COORDINATES Coordinate {
+          point [
+            0 0 0
+            0 0 8.4
+            4.2 0 8.4
+            4.2 0 9.6
+            7.2 0 9.6
+            7.2 0 3.6
+            9.4 0 3.6
+            9.4 0 0
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, 4, 5, 6, 7
+        ]
+      }
+    }
+    Transform {
+      translation 2 0 9.6
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.8 0.8
+            baseColorMap ImageTexture {
+              url [
+                "textures/interlaced_parquetry.jpg"
+              ]
+            }
+            roughness 0.5
+            metalness 0
+            textureTransform TextureTransform {
+              scale 4.4 2
+            }
+          }
+          geometry Plane {
+            size 4.4 2
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(1)"
+  boundingObject Transform {
+    translation 4.7 0 4.8
+    children [
+      Plane {
+        size 9.4 9.6
+      }
+    ]
+  }
+}
+DEF CEIL Solid {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "textures/roughcast.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 9.6 9.6
+        }
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            0 2.4 0
+            0 2.4 8.4
+            4.2 2.4 8.4
+            4.2 2.4 9.6
+            7.2 2.4 9.6
+            7.2 2.4 3.6
+            9.4 2.4 3.6
+            9.4 2.4 0
+          ]
+        }
+        coordIndex [
+          7, 6, 5, 4, 3, 2, 1, 0
+        ]
+      }
+    }
+  ]
+  boundingObject Transform {
+    translation 4.7 0 4.8
+    children [
+      Plane {
+        size 9.4 9.6
+      }
+    ]
+  }
+}
+Wall {
+  translation -0.1 0 2.6
+  rotation 0 1 0 1.5708
+  name "wall(1)"
+  size 5.6 2.4 0.2
+}
+Wall {
+  translation -0.1 0 8.5
+  rotation 0 1 0 1.5708
+  name "wall(2)"
+  size 0.2 2.4 0.2
+}
+Wall {
+  translation 4.1 0 8.5
+  name "wall(3)"
+  size 0.2 2.4 0.2
+}
+Wall {
+  translation 5.6 0 9.7
+  name "wall(4)"
+  size 3.2 2.4 0.2
+}
+Wall {
+  translation 7.3 0 9.1
+  rotation 0 1 0 -1.5708
+  name "wall(5)"
+  size 1.4 2.4 0.2
+}
+Wall {
+  translation 7.3 0 6.15
+  rotation 0 1 0 -1.5708
+  name "wall(6)"
+  size 1.3 2.4 0.2
+}
+Wall {
+  translation 7.3 0 4.15
+  rotation 0 1 0 -1.5708
+  name "wall(7)"
+  size 1.1 2.4 0.2
+}
+Wall {
+  translation 9.5 0 1.8
+  rotation 0 1 0 -1.5708
+  name "wall(8)"
+  size 4 2.4 0.2
+}
+Wall {
+  translation 5.2 0 -0.1
+  rotation 0 1 0 3.14159
+  name "wall(9)"
+  size 8.4 2.4 0.2
+}
+Wall {
+  translation 5.3 0 1.3
+  rotation 0 1 0 1.5708
+  name "wall(10)"
+  size 2.6 2.4 0.2
+}
+Wall {
+  translation 4.5 0 2.5
+  rotation 0 1 0 3.14159
+  name "wall(11)"
+  size 1.4 2.4 0.2
+}
+Wall {
+  translation 2.1 0 2.5
+  rotation 0 1 0 3.14159
+  name "wall(12)"
+  size 1.4 2.4 0.2
+}
+Wall {
+  translation 1.7 0 1.2
+  rotation 0 1 0 -1.5708
+  name "wall(13)"
+  size 2.4 2.4 0.2
+}
+Wall {
+  translation 0.1 0 2.5
+  rotation 0 1 0 3.14159
+  name "wall(14)"
+  size 0.2 2.4 0.2
+}
+Wall {
+  translation 4.1 0 3.9
+  rotation 0 1 0 -1.5708
+  name "wall(15)"
+  size 0.6 2.4 0.2
+}
+Wall {
+  translation 5.7 0 3.7
+  name "wall(16)"
+  size 3 2.4 0.2
+}
+Wall {
+  translation -0.1 0 9.6
+  rotation 0 1 0 1.5708
+  name "wall(17)"
+  size 2 0.8 0.2
+}
+Wall {
+  translation 1.9 0 10.7
+  name "wall(18)"
+  size 4.2 0.8 0.2
+}
+Wall {
+  translation 4.1 0 10.3
+  rotation 0 1 0 1.57
+  size 1 0.8 0.2
+}
+Door {
+  hidden translation_5 1.2194623644212754e-09 0 0.0010000038875468964
+  translation 4.1 0 9.1
+  rotation 0 1 0 1.57
+  position -7.852988443475234e-09
+}
+Window {
+  translation 8.4 0 3.7
+  name "window(1)"
+  size 2 2.4 0.2
+  bottomWallHeight 0
+  windowHeight 2
+}
+Window {
+  translation 7.3 0 5.1
+  rotation 0 1 0 1.57
+  name "window(2)"
+}
+Window {
+  translation 7.3 0 7.6
+  rotation 0 1 0 1.57
+  name "window(3)"
+  size 1.6 2.4 0.2
+}
+Window {
+  translation 2 0 8.5
+  name "window(4)"
+  size 4 2.4 0.2
+  bottomWallHeight 0
+  windowHeight 2
+}
+Window {
+  translation -0.1 0 6.9
+  rotation 0 1 0 1.57
+  size 3 2.4 0.2
+  bottomWallHeight 0
+  windowHeight 2
+}
+Table {
+  translation 5.93812 2.30926e-14 7.83841
+  name "table(1)"
+  feetPadding 0.05
+}
+Chair {
+  translation 6.008121003373893 -0.0005611319999995201 8.765049193720275
+  rotation 0.0004447379795059706 0.9999998046795836 0.00043914567542778943 1.5834502903369962
+  physics Physics {
+    density 500
+  }
+}
+Table {
+  translation 1.4 0 6.1
+  rotation 0 1 0 4.71239
+  size 1.2 0.56 0.8
+}
+Sofa {
+  translation 2.8 0 6.1
+  rotation 0 1 0 3.14159
+}
+Armchair {
+  translation 1.4 0 7.6
+  rotation 0 1 0 1.57079
+}
+Fridge {
+  hidden position_0_0 -3.991205294158444e-08
+  hidden position_0_1 4.209484555506077e-08
+  hidden rotation_1 0 -1 0 4.2146848510894035e-08
+  hidden rotation_2 0 1 0 4.2146848510894035e-08
+  translation 6.85 0 4.15
+  rotation 0 1 0 4.71239
+}
+Cabinet {
+  hidden translation_6 -0.4299999999586186 0.33986006569635235 0.49999999931027883
+  hidden rotation_6 -0.9982051127147223 1.7036194134267009e-10 -0.059887836412651295 -5.383920528393049e-05
+  hidden position_6_0 0.0019883295583242593
+  hidden translation_7 4.798921625803754e-06 0 0.0014328976195115322
+  hidden rotation_7 0 1 0 0.006698180830405165
+  hidden translation_10 0.43000000004137906 0.3398600656944801 0.49999999931027794
+  hidden rotation_10 -0.9982051212624665 1.7154158998434934e-10 -0.05988769393944542 -5.3839208750354795e-05
+  hidden position_10_0 0.001988329640781847
+  hidden translation_11 4.7989222396183084e-06 0 0.00143289771112012
+  hidden rotation_11 0 1 0 0.00669818125870378
+  hidden translation_14 -4.1455727739503345e-11 0.33986006566214605 0.49999999931027794
+  hidden rotation_14 0.9981984508785673 1.7104745789471525e-10 -0.05999877218434137 5.383963635370056e-05
+  hidden position_14_0 -0.0019887381667491573
+  hidden translation_15 -4.800889294970245e-06 0 0.001433191346726264
+  hidden rotation_15 0 -1 0 0.006699553899406611
+  translation 5.84 0 3.8
+  name "cabinet(1)"
+  outerThickness 0.02
+  rowsHeights [
+    0.21, 0.21, 0.22
+  ]
+  columnsWidths [
+    0.43, 0.43, 0.43
+  ]
+  layout [
+    "LeftSidedDoor (1,  1, 1, 3, 1.5)"
+    "LeftSidedDoor (3, 1, 1, 3, 1.5)"
+    "RightSidedDoor (2, 1, 1, 3, 1.5)"
+    "Shelf (1, 2, 3, 0)"
+    "Shelf (2, 3, 2, 0)"
+    "Shelf (2, 1, 0, 1)"
+    "Shelf (1, 1, 0, 3)"
+  ]
+  handle CabinetHandle {
+    translation 0.2 0 0
+    handleLength 0.09
+    handleRadius 0.008
+  }
+}
+Cabinet {
+  hidden translation_6 0 0.12985642332420871 0.49999999892270175
+  hidden rotation_6 1 1.1653558969137106e-16 3.447285577986591e-15 5.611068706464768e-05
+  hidden position_6_0 0.005844700766627103
+  hidden translation_7 0 0 0.019355940431873678
+  hidden translation_14 0 0.34485642332749966 0.49999999892270175
+  hidden rotation_14 1 1.1903602542237226e-16 1.6087369853821916e-15 5.61106801719776e-05
+  hidden position_14_0 0.005844699747367657
+  hidden translation_15 0 0 0.01935593856888279
+  hidden translation_22 0 0.5548564233266783 0.49999999892270175
+  hidden rotation_22 0.9999999999999999 1.1771415698907857e-16 2.2981928897239593e-15 5.611068189324038e-05
+  hidden position_22_0 0.005844700457332419
+  hidden translation_23 0 0 0.019355940086546494
+  translation 4.96 0 3.8
+  name "cabinet(2)"
+  outerThickness 0.02
+  rowsHeights [
+    0.22, 0.21, 0.21
+  ]
+  columnsWidths [
+    0.4
+  ]
+  layout [
+    "Drawer (1, 1, 1, 1, 1.5)"
+    "Drawer (1, 2, 1, 1, 1.5)"
+    "Drawer (1, 3, 1, 1, 1.5)"
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+  ]
+  handle CabinetHandle {
+    handleLength 0.09
+    handleRadius 0.008
+  }
+}
+Cabinet {
+  translation 1.6 0 1.1
+  rotation 0 1 0 4.71239
+  name "cabinet(5)"
+  depth 0.4
+  outerThickness 0.02
+  rowsHeights [
+    0.52, 0.44, 0.44, 0.44, 0.44
+  ]
+  columnsWidths [
+    0.96
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+  ]
+}
+Cabinet {
+  translation 5.4 0 1.098
+  rotation 0 1 0 1.5708
+  depth 0.4
+  outerThickness 0.02
+  rowsHeights [
+    0.52, 0.44, 0.44, 0.44, 0.44
+  ]
+  columnsWidths [
+    0.96
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+  ]
+}
+Oven {
+  hidden position_0_0 -1.5043720175862384e-35
+  translation 4.52 0.34 4.05
+  rotation 0 1 0 -1.5708
+}
+Sink {
+  translation 5.841 0.715 3.97
+  rotation 0 1 0 3.14159
+}
+HotPlate {
+  translation 4.52 0.71 4.16
+  rotation 1 0 0 6.28319
+}
+Worktop {
+  translation 4.96 0.71 4.056
+  name "worktop(1)"
+  size 1.32 0.06 0.51
+}
+Worktop {
+  translation 6.28 0.71 4.056
+  name "worktop(2)"
+  size 0.44 0.06 0.51
+}
+Worktop {
+  translation 5.84 0.71 4.282
+  name "worktop(3)"
+  size 0.44 0.06 0.0575
+}
+Worktop {
+  translation 5.84 0.71 3.843
+  size 0.44 0.06 0.09
+}
+Bed {
+  translation 8.5 0 2.1
+  rotation 0 -1 0 1.5708
+}
+BunchOfSunFlowers {
+  translation 9 0 0.4
+  rotation 0 0 1 6.28319
+}
+LandscapePainting {
+  translation 9.375 1.5 2.1
+  rotation 0 -1 0 1.5708
+}
+PortraitPainting {
+  translation 2 1.5 2.625
+}
+DEF COUNTER_BOTTOM SolidBox {
+  translation 6.2 0.5 6.1
+  name "box(1)"
+  size 2 1 0.6
+  appearance PBRAppearance {
+    baseColor 0.8 0.8 0.8
+    roughness 0.5
+    metalness 0
+  }
+}
+DEF COUNTER_TOP SolidBox {
+  translation 6.2 1.025 6.1
+  size 2.1 0.05 0.7
+  appearance PBRAppearance {
+    baseColor 0.8 0.8 0.8
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+      scale 2 2
+    }
+  }
+}
+Cam_robot {
+  hidden position_0_0 10262.988069451549
+  hidden position_0_1 8244.247814484903
+  hidden position_0_2 10268.822050895456
+  hidden position_0_3 8237.311572374674
+  hidden position_0_4 0.16352
+  hidden translation_1 0.05999999999814659 -8.211894634599255e-06 0.04999942983942913
+  hidden rotation_1 0.37359005994230826 -0.37329267719168585 0.8491660875631847 1.732787335415052
+  hidden translation_2 -0.06000000000188274 6.791835669928172e-06 0.05000464713846351
+  hidden rotation_2 -0.09475689058033133 0.09468146046141591 0.9909876652776464 1.5790531008315225
+  hidden translation_3 0.059999999997961795 -7.480657493926009e-06 -0.04999656487820033
+  hidden rotation_3 0.16151674871239757 -0.1613881773730587 0.9735842008216743 1.5967680483229238
+  hidden translation_4 -0.06000000000206729 3.244560051617994e-06 -0.04999243707996718
+  hidden rotation_4 -0.1833746560178029 0.18322869142443876 -0.9658162258780083 4.678410139961296
+  hidden translation_11 -0.085 0.21352000000000002 0
+  hidden position_11_0 0.5935199999999999
+  hidden translation_12 -0.07914488572252668 1.9984014443252818e-15 0.0027964124064941732
+  hidden rotation_12 0.280651659965067 0.28087523943490583 0.9177928664089936 1.6556814257932189
+  translation 0.7209976044999088 0.03993067099654478 1.8882040633298005
+  rotation 6.067337495310913e-05 0.9999999980214033 -1.6611289700947202e-05 -2.832686836591303
+}
+Pedestrian {
+  translation 4.66 0.83 0.4
+  rotation 0 1 0 -1.047195307179586
+}
+Pedestrian {
+  translation 4.63022 0.89 4.81531
+  rotation 0 1 0 -2.8797953071795863
+  name "pedestrian(2)"
+  shirtColor 0 0.5 0.6
+  pantsColor 1 0 0
+}
+Pedestrian {
+  translation 2.41992 1.07 9.52622
+  rotation 0 1 0 3.14159
+  name "pedestrian(3)"
+  shirtColor 0.4 0 1
+  pantsColor 0.07 1 0.5
+}
+Pedestrian {
+  translation 7.84729 0.882457 2.49263
+  rotation 0.5817041226066634 -0.6406041350211086 -0.501245105648194 1.89214
+  name "pedestrian(1)"
+  shirtColor 0.25 0 0.2
+  pantsColor 0.5 0.47 0
+}
