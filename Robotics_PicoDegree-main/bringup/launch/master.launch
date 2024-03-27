@@ -12,8 +12,6 @@
   <!-- URDF -->
   <include file="$(find bringup)/robot_description/launch/description.launch"/>
 
-  <!-- Rviz -->
-	<include file="$(find bringup)/visualization/launch/4wheelrobot_viz.launch"/>
   
   <!-- Localization -->
   <node name="Localization" pkg="bringup" type="localize" respawn="false" output="screen"/>
