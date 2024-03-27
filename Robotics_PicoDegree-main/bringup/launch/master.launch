@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-
+  <node name="Dynamic" pkg="bringup" type="dynamic_link_camera" respawn="false" output="screen"/>
   <!-- Sensor Enable -->
   <node name="Teleop" pkg="bringup" type="enable" respawn="false" output="screen"/>
   
