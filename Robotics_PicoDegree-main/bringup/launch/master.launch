@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <node name="Dynamic" pkg="bringup" type="dynamic_link_camera" respawn="false" output="screen"/>
+  <!-- <node name="Dynamic" pkg="bringup" type="dynamic_link_camera" respawn="false" output="screen"/> -->
   <!-- Sensor Enable -->
   <node name="Teleop" pkg="bringup" type="enable" respawn="false" output="screen"/>
   
@@ -12,7 +12,9 @@
   <!-- URDF -->
   <include file="$(find bringup)/robot_description/launch/description.launch"/>
 
-  
+  <!-- LiDAR -->
+  <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+
   <!-- Localization -->
   <node name="Localization" pkg="bringup" type="localize" respawn="false" output="screen"/>
 
@@ -22,7 +24,7 @@
   <!-- Simple Goal -->
 	<include file="$(find simple_navigation_goals)/launch/movebase_seq.launch"/>
 
-  <!-- Image processing -->
-  <node name="Image_process" pkg="bringup" type="image_detect" respawn="false" output="screen"/>
+  <!-- Image processing
+  <node name="Image_process" pkg="bringup" type="image_detect" respawn="false" output="screen"/> -->
 
 </launch>
